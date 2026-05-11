@@ -172,7 +172,7 @@ function reproducirMusicaJuego() {
         musicaJuego.currentTime = 0;
     }
 
-    musicaJuego = new Audio('sound/juego.m4a');
+    musicaJuego = new Audio('sound/pvz-theme.mp3');
     musicaJuego.preload = 'auto';
     musicaJuego.loop = false;
     musicaJuego.currentTime = 0;
