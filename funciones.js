@@ -188,27 +188,25 @@ function listos() {
 }
 
 function conteo() {
+    document.querySelector('.msj').style.pointerEvents = "none";
     var sfxclick = new Audio('sound/mariokart.mp3');
     document.querySelector('.msj').style.opacity = "0";
     document.querySelector('.no3').style.opacity = "1";
     sfxclick.play();
 
     setTimeout(function () {
+
         document.querySelector('.no3').style.opacity = "0";
         document.querySelector('.no2').style.opacity = "1";
-        sfxclick.play();
-
         setTimeout(function () {
             document.querySelector('.no2').style.opacity = "0";
             document.querySelector('.no1').style.opacity = "1";
-            sfxclick.play();
             tiempoRandom = Math.floor((Math.random() * 10) + 1);
             tiempoRandom = tiempoRandom + "000"
 
             setTimeout(function () {
                 document.querySelector('.no1').style.opacity = "0";
                 document.querySelector('.conteo').style.display = "none";
-                sfxclick.play();
             }, tiempoRandom);
         }, 1000);
     }, 1000);
